@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="md:flex md:items-center">
         
         <div className="mr-auto">
-          <img src="/src/assets/ldselogo.png" alt="Logo" className="h-24" />
+          <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
         </div>
         
       
