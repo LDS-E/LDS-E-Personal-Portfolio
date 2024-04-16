@@ -7,7 +7,7 @@ const HeroSection = () => {
     const textRef = document.getElementById('typewriter-text');
 
     const typewriter = new Typewriter(textRef, {
-      loop: true, // Fazer o efeito de digitação em loop
+      loop: true, // 
     });
 
     typewriter
@@ -28,7 +28,7 @@ const HeroSection = () => {
       .start();
 
     return () => {
-      typewriter.stop(); // Garantir que o efeito do Typewriter seja limpo quando o componente for desmontado
+      typewriter.stop(); 
     };
   }, []);
 
