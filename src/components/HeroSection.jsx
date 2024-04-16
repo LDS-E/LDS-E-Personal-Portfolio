@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+// HeroSection.jsx
+import { useEffect } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 
-
-export const HeroSection = () => {
+const HeroSection = () => {
   useEffect(() => {
     const textRef = document.getElementById('typewriter-text');
 
@@ -33,8 +33,10 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className="bg-black">
-      <h1 id="typewriter-text" className="text-white text-4xl text-balance text-center"></h1>
+    <div id="hero" className="bg-black min-h-screen flex items-center justify-center">
+      <div className="container mx-auto border rounded-lg">
+        <h1 id="typewriter-text" className="text-white text-4xl text-balance text-center"></h1>
+      </div>
     </div>
   );
 };
