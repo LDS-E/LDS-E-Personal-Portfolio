@@ -1,2 +1,2 @@
-# -Personal-portfolio
-Prersonal portfolio, contact and professional content page.(in development process)
+# -Personal-Portfolio
+Personal portfolio, contact and professional content page.(in development process)
