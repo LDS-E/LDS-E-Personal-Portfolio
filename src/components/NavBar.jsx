@@ -10,12 +10,12 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white p-4 flex justify-between items-center">
       <div className="md:flex md:items-center">
-        {/* Logo */}
+        
         <div className="mr-auto">
           <img src="/src/assets/ldselogo.png" alt="Logo" className="h-24" />
         </div>
         
-        {/* Botão de Menu */}
+      
         <div className="cursor-pointer md:hidden" onClick={toggleMenu}>
           <svg
             className="w-6 h-6"
@@ -34,13 +34,13 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Links do Menu */}
+    
       <ul className={`md:flex md:items-center md:w-auto ${isOpen ? 'block' : 'hidden'} mt-4 md:mt-0`}>
         <li className="md:ml-4">
           <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Home</a>
         </li>
         <li className="md:ml-4">
-          <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Projects Overview</a>
+          <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Projects</a>
         </li>
         <li className="md:ml-4">
           <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Services</a>

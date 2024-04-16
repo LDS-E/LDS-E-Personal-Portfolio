@@ -18,7 +18,7 @@ const ContactMe = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aqui você pode adicionar a lógica para enviar o formulário, como fazer uma solicitação HTTP para um servidor.
+        // further request for a request HTTP server.
         console.log(formData);
     };
 

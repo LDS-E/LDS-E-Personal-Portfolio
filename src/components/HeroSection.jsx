@@ -12,11 +12,11 @@ const HeroSection = () => {
 
     typewriter
       .changeDelay(50)
-      .typeString("Sorry for the mess! My portfolio is under construction")
+      .typeString("Sorry for the mess! My portfolio is under development")
       .changeDeleteSpeed(200)
       .changeDelay(200)
       .deleteChars(2)
-      .typeString("on .")
+      .typeString("nt .")
       .deleteChars(1)
       .typeString(",")
       .deleteChars(1)
