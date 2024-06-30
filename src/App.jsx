@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 import ContactMe from "./components/ContactMe";
 import AboutMe from "./components/AboutMe";
-import DailyTechs from "./components/DailyThecs";
+import DailyTechs from "./components/Stacks/DailyThecs";
 import ProjectMenuMain from "./components/ProjectMenuMain";
 
 function App() {
