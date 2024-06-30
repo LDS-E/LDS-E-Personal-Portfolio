@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,14 +8,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white p-4 flex justify-between items-center">
+    <nav className="bg-backdark text-white p-4 flex justify-between items-center">
       <div className="md:flex md:items-center">
-        
         <div className="mr-auto">
           <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
         </div>
-        
-      
+
         <div className="cursor-pointer md:hidden" onClick={toggleMenu}>
           <svg
             className="w-6 h-6"
@@ -33,20 +31,43 @@ const Navbar = () => {
           </svg>
         </div>
       </div>
-      
-    
-      <ul className={`md:flex md:items-center md:w-auto ${isOpen ? 'block' : 'hidden'} mt-4 md:mt-0`}>
+
+      <ul
+        className={`md:flex md:items-center md:w-auto ${
+          isOpen ? "block" : "hidden"
+        } mt-4 md:mt-0`}
+      >
         <li className="md:ml-4">
-          <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Home</a>
+          <a
+            href="#"
+            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+          >
+            Home
+          </a>
         </li>
         <li className="md:ml-4">
-          <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Projects</a>
+          <a
+            href="#"
+            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+          >
+            Projects
+          </a>
         </li>
         <li className="md:ml-4">
-          <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Services</a>
+          <a
+            href="#"
+            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+          >
+            Services
+          </a>
         </li>
         <li className="md:ml-4">
-          <a href="#" className="block md:inline-block text-white hover:text-gray-400 transition duration-300">Contact</a>
+          <a
+            href="#"
+            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+          >
+            Contact
+          </a>
         </li>
       </ul>
     </nav>

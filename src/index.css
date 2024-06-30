@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* You can adjust the colors and heights as needed */
+.short-line {
+  background-color: #5546ff; /* secondary color */
+  height: 4px;
+  width: 60px;
+  margin: 0 auto;
+}
+
+.long-line {
+  background-color: #5546ff; /* secondary color */
+  height: 4px;
+  width: 120px;
+  margin: 0 auto;
+}
