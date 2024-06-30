@@ -1,18 +1,19 @@
 // HeroSection.jsx
-import { useEffect } from 'react';
-import Typewriter from 'typewriter-effect/dist/core';
+import { useEffect } from "react";
+import Typewriter from "typewriter-effect/dist/core";
+import Navbar from "./NavBar";
 
 const HeroSection = () => {
   useEffect(() => {
-    const textRef = document.getElementById('typewriter-text');
+    const textRef = document.getElementById("typewriter-text");
 
     const typewriter = new Typewriter(textRef, {
-      loop: true, // 
+      loop: true, //
     });
 
     typewriter
       .changeDelay(50)
-      .typeString("Sorry for the mess! My portfolio is under development")
+      .typeString("Welcome! My portfolio is under development")
       .changeDeleteSpeed(200)
       .changeDelay(200)
       .deleteChars(2)
@@ -28,14 +29,21 @@ const HeroSection = () => {
       .start();
 
     return () => {
-      typewriter.stop(); 
+      typewriter.stop();
     };
   }, []);
 
   return (
-    <div id="hero" className="bg-black min-h-screen flex items-center justify-center">
-      <div className="container mx-auto border rounded-lg">
-        <h1 id="typewriter-text" className="text-white text-4xl text-balance text-center"></h1>
+    <div id="hero" className="bg-backdark h-screen">
+      <Navbar />
+
+      <div className="flex items-center justify-center h-full">
+        <div className="container mx-auto flex items-center justify-center border rounded-lg">
+          <h1
+            id="typewriter-text"
+            className="text-primary text-4xl text-balance text-center"
+          ></h1>
+        </div>
       </div>
     </div>
   );
