@@ -29,9 +29,14 @@ const ContactMe = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-start items-center text-center mb-8">
           <div className="bg-secondary h-1 w-32 mr-4"></div>
-          <h1 className="text-white text-2xl font-bold">Get in touch</h1>
+          <h1 className="text-white text-2xl font-bold">Send me a message!</h1>
+
           <div className="bg-secondary h-1 w-16 ml-4"></div>
         </div>
+
+        <h2 className="text-white text-center mb-4">
+          Got a question or proposal, or just want to say hello? Go ahead.
+        </h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-6">
             <input
@@ -69,12 +74,16 @@ const ContactMe = () => {
               required
             ></textarea>
           </div>
-          <button
-            type="submit"
-            className="bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-900"
-          >
-            Send
-          </button>
+          <div className="flex justify-center">
+            {" "}
+            {/* Flex container for centering */}
+            <button
+              type="submit"
+              className="btn bg-primary text-black text-xl md:text-2xl py-2 px-4 rounded-md hover:font-bold hover:bg-secondary hover:text-white"
+            >
+              Send
+            </button>
+          </div>
         </form>
       </div>
     </section>
