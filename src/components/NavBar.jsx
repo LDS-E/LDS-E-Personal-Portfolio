@@ -9,11 +9,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-backdark text-white p-4 flex justify-between items-center">
-      <div className="md:flex md:items-center">
+      <div className="flex items-center">
         <div className="mr-auto">
           <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
         </div>
 
+        {/* Hamburger Icon for Mobile */}
         <div className="cursor-pointer md:hidden" onClick={toggleMenu}>
           <svg
             className="w-6 h-6"
@@ -32,8 +33,9 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Menu Links */}
       <ul
-        className={`md:flex md:items-center md:w-auto ${
+        className={`text-2xl md:flex gap-x-10 md:items-center md:w-auto ${
           isOpen ? "block" : "hidden"
         } mt-4 md:mt-0`}
       >
