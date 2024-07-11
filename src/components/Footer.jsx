@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-backdark text-gray-300 h-screen">
@@ -25,25 +27,33 @@ const Footer = () => {
             </ul>
           </div>
           <ul className="flex space-x-4">
-            <li>
-              <a
-                href="https://olaolu.dev/work"
-                className="text-text hover:text-back px-4 py-2 rounded-md"
+            <li className="md:ml-4">
+              <Link
+                to="/"
+                className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
               >
-                Projects
+                Home
+              </Link>
+            </li>
+            <li className="md:ml-4">
+              <Link
+                to="/projects-menu"
+                className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+              >
+                Projects Menu
+              </Link>
+            </li>
+            <li className="md:ml-4">
+              <a
+                href="#contact"
+                className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+              >
+                Contact
               </a>
             </li>
             <li>
               <a
-                href="https://olaolu.dev/shelf"
-                className="text-text hover:text-back px-4 py-2 rounded-md"
-              >
-                About Me
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://olaolu.dev/resume"
+                href="#"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-text hover:text-back px-4 py-2 rounded-md"

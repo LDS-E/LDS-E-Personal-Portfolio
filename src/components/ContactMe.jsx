@@ -22,16 +22,13 @@ const ContactMe = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="h-screen flex items-center justify-center bg-backdark"
-    >
+    <section className="h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="flex justify-start items-center text-center mb-8">
-          <div className="bg-secondary h-1 w-32 mr-4"></div>
+          <div className="bg-primary h-1 w-32 mr-4"></div>
           <h1 className="text-white text-2xl font-bold">Send me a message!</h1>
 
-          <div className="bg-secondary h-1 w-16 ml-4"></div>
+          <div className="bg-primary h-1 w-16 ml-4"></div>
         </div>
 
         <h2 className="text-white text-center mb-4">

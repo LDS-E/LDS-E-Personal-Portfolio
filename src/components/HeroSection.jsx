@@ -1,7 +1,6 @@
 // HeroSection.jsx
 import { useEffect } from "react";
 import Typewriter from "typewriter-effect/dist/core";
-import Navbar from "./NavBar";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -34,9 +33,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div id="hero" className="bg-backdark h-screen">
-      <Navbar />
-
+    <div className=" h-screen">
       <div className="flex items-center justify-center h-full">
         <div className="container mx-auto flex items-center justify-center border rounded-lg">
           <h1

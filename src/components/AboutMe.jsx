@@ -4,7 +4,7 @@ import puzzle from "/imgs/puzzle.svg";
 
 const AboutMe = () => {
   return (
-    <section className="h-auto flex items-center justify-center py-16 bg-gray-800 text-white">
+    <section className="h-auto flex items-center justify-center py-16 text-white">
       <div className="container mx-auto px-4">
         <div className="flex justify-start items-center text-center mb-10">
           <div className="bg-secondary h-1 w-32 mr-4"></div>

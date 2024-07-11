@@ -16,3 +16,7 @@
   width: 120px;
   margin: 0 auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}

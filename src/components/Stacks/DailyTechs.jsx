@@ -4,12 +4,12 @@ const DailyTechs = () => {
   const skills = Stacks();
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-16 bg-backdark text-white">
+    <section className="min-h-screen flex items-center justify-center py-16 text-white">
       <div className="container mx-auto px-4">
         <div className="flex justify-end items-center text-center mb-8">
-          <div className="bg-secondary h-1 w-16 mr-4"></div>
+          <div className="bg-accent h-1 w-16 mr-4"></div>
           <h1 className="text-white text-2xl font-bold">My Stacks</h1>
-          <div className="bg-secondary h-1 w-32 ml-4"></div>
+          <div className="bg-accent h-1 w-32 ml-4"></div>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
