@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/imgs/bgimgfigma2.png')",
+      },
       colors: {
         primary: "#BFFF0A",
         primarylight: "#B3EB14",

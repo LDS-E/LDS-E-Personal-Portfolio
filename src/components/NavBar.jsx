@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,9 @@ const Navbar = () => {
     <nav className="bg-backdark text-white p-4 flex justify-between items-center">
       <div className="flex items-center">
         <div className="mr-auto">
-          <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
+          <Link to="/">
+            <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
+          </Link>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -41,15 +44,23 @@ const Navbar = () => {
       >
         <li className="md:ml-4">
           <a
-            href="#"
+            href="#about"
             className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
           >
-            Home
+            About
           </a>
         </li>
         <li className="md:ml-4">
           <a
-            href="#"
+            href="#techs"
+            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+          >
+            Technologies
+          </a>
+        </li>
+        <li className="md:ml-4">
+          <a
+            href="#projects"
             className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
           >
             Projects
@@ -57,15 +68,7 @@ const Navbar = () => {
         </li>
         <li className="md:ml-4">
           <a
-            href="#"
-            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
-          >
-            Services
-          </a>
-        </li>
-        <li className="md:ml-4">
-          <a
-            href="#"
+            href="#contact"
             className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
           >
             Contact

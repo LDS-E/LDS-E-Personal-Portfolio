@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const Project = () => {
+const ProjectsMenu = () => {
   useEffect(() => {
     // Ao carregar a página Home, rola para o topo
     window.scrollTo(0, 0);
@@ -8,9 +8,9 @@ const Project = () => {
 
   return (
     <div className="bg-hero-pattern bg-cover bg-center min-h-screen">
-      Project
+      ProjectsMenu
     </div>
   );
 };
 
-export default Project;
+export default ProjectsMenu;

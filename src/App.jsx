@@ -1,22 +1,20 @@
-//import React from 'react'
 import "./index.css";
-//import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HeroSection from "./components/HeroSection";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Project from "./pages/Project";
+import ProjectsMenu from "./pages/ProjectsMenu";
+import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
-/* import Navbar from "./components/NavBar"; */
-import ContactMe from "./components/ContactMe";
-import AboutMe from "./components/AboutMe";
-import DailyTechs from "./components/Stacks/DailyThecs";
-import ProjectMenuMain from "./components/ProjectMenuMain";
 
 function App() {
   return (
     <>
-      <HeroSection />
-      <AboutMe />
-      <DailyTechs />
-      <ProjectMenuMain />
-      <ContactMe />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/projects-menu" element={<ProjectsMenu />} />
+      </Routes>
       <Footer />
     </>
   );

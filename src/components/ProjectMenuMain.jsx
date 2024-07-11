@@ -2,7 +2,7 @@ const ProjectMenuMain = () => {
   return (
     <div
       id="indicators-carousel"
-      className="relative h-screen bg-slate-600"
+      className="relative h-screen"
       data-carousel="static"
     >
       {/* Carousel wrapper */}
