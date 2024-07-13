@@ -44,10 +44,10 @@ const Navbar = () => {
       >
         <li className="md:ml-4">
           <a
-            href="#about"
+            to="/projects-menu"
             className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
           >
-            About
+            Projects
           </a>
         </li>
         <li className="md:ml-4">
