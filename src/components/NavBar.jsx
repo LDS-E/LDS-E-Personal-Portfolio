@@ -9,71 +9,94 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-backdark text-white p-4 flex justify-between items-center">
-      <div className="flex items-center">
+    <nav className="fixed top-0 w-full bg-transparent text-white px-4 flex justify-between items-center z-50">
+      <div className="flex items-center w-full justify-between">
         <div className="mr-auto">
           <Link to="/">
             <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
           </Link>
         </div>
 
-        {/* Hamburger Icon for Mobile */}
-        <div className="cursor-pointer md:hidden" onClick={toggleMenu}>
+        {/* Hamburger Icon */}
+        <div className="cursor-pointer" onClick={toggleMenu}>
           <svg
-            className="w-6 h-6"
+            className="w-8 h-8"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-            />
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <>
+                <line
+                  x1="3"
+                  y1="6"
+                  x2="21"
+                  y2="6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <line
+                  x1="3"
+                  y1="12"
+                  x2="15"
+                  y2="12"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </>
+            )}
           </svg>
         </div>
       </div>
 
       {/* Menu Links */}
       <ul
-        className={`text-2xl md:flex gap-x-10 md:items-center md:w-auto ${
-          isOpen ? "block" : "hidden"
-        } mt-4 md:mt-0`}
+        className={`fixed top-0 right-4 w-60 bg-backdark text-white text-2xl flex flex-col items-center gap-6 transition-transform duration-700 ease-in-out rounded-md ${
+          isOpen ? "translate-y-20 py-6" : "-translate-y-full"
+        }`}
       >
-        <li className="md:ml-4">
-          <a
+        <li>
+          <Link
             to="/projects-menu"
-            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+            className="block text-white hover:text-gray-400 transition duration-300"
+            onClick={toggleMenu}
           >
-            Projects
-          </a>
+            My Work
+          </Link>
         </li>
-        <li className="md:ml-4">
+        <li>
           <a
             href="#techs"
-            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+            className="block text-white hover:text-gray-400 transition duration-300"
+            onClick={toggleMenu}
           >
-            Technologies
+            My Résumé
           </a>
         </li>
-        <li className="md:ml-4">
+        <li>
           <a
             href="#projects"
-            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
+            className="block text-white hover:text-gray-400 transition duration-300"
+            onClick={toggleMenu}
           >
-            Projects
+            Maybe a Blog
           </a>
         </li>
-        <li className="md:ml-4">
-          <a
-            href="#contact"
-            className="block md:inline-block text-white hover:text-gray-400 transition duration-300"
-          >
-            Contact
-          </a>
-        </li>
+
+        <br />
+
+        <h2 className="text-primary">Say Hello</h2>
+        <li className="text-lg">lucass.eifler@gmail.com</li>
       </ul>
     </nav>
   );

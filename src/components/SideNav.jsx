@@ -1,9 +1,44 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SideNav = () => {
   const [activeSection, setActiveSection] = useState("");
 
-  const handleScroll = (sectionId) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["top", "about", "techs", "projects", "contact"];
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      let foundSection = false;
+
+      for (let sectionId of sections) {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+          const sectionTop = sectionElement.offsetTop;
+          const sectionHeight = sectionElement.offsetHeight;
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            setActiveSection(sectionId);
+            foundSection = true;
+            break;
+          }
+        }
+      }
+
+      if (!foundSection) {
+        setActiveSection("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToSection = (sectionId) => {
     if (sectionId === "top") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -18,49 +53,41 @@ const SideNav = () => {
         <ul className="space-y-6 list-none">
           <li className="relative">
             <button
-              onClick={() => handleScroll("top")}
+              onClick={() => scrollToSection("top")}
               className={`transform rotate-45 border border-[#ebebeb] ${
-                activeSection === "top"
-                  ? "bg-transparent -rotate-0"
-                  : "bg-transparent"
+                activeSection === "top" ? "rotate-0" : ""
               } text-white p-1 flex items-center justify-center w-3 h-3 hover:bg-gray-600 transition duration-300`}
             ></button>
           </li>
           <li className="relative">
             <button
-              onClick={() => handleScroll("about")}
+              onClick={() => scrollToSection("about")}
               className={`transform rotate-45 border border-[#ebebeb] ${
-                activeSection === "about" ? "bg-transparent -rotate-0" : ""
-              }  p-1 flex items-center justify-center w-3 h-3 hover:bg-gray-600 transition duration-300`}
-            ></button>
-          </li>
-          <li className="relative">
-            <button
-              onClick={() => handleScroll("techs")}
-              className={`transform rotate-45 border border-[#ebebeb] ${
-                activeSection === "techs"
-                  ? "bg-transparent -rotate-0"
-                  : "bg-transparent"
+                activeSection === "about" ? "rotate-0" : ""
               } text-white p-1 flex items-center justify-center w-3 h-3 hover:bg-gray-600 transition duration-300`}
             ></button>
           </li>
           <li className="relative">
             <button
-              onClick={() => handleScroll("projects")}
+              onClick={() => scrollToSection("techs")}
               className={`transform rotate-45 border border-[#ebebeb] ${
-                activeSection === "projects"
-                  ? "bg-transparent -rotate-0"
-                  : "bg-transparent"
+                activeSection === "techs" ? "rotate-0" : ""
               } text-white p-1 flex items-center justify-center w-3 h-3 hover:bg-gray-600 transition duration-300`}
             ></button>
           </li>
           <li className="relative">
             <button
-              onClick={() => handleScroll("contact")}
+              onClick={() => scrollToSection("projects")}
               className={`transform rotate-45 border border-[#ebebeb] ${
-                activeSection === "contact"
-                  ? "bg-transparent -rotate-0"
-                  : "bg-transparent"
+                activeSection === "projects" ? "rotate-0" : ""
+              } text-white p-1 flex items-center justify-center w-3 h-3 hover:bg-gray-600 transition duration-300`}
+            ></button>
+          </li>
+          <li className="relative">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className={`transform rotate-45 border border-[#ebebeb] ${
+                activeSection === "contact" ? "rotate-0" : ""
               } text-white p-1 flex items-center justify-center w-3 h-3 hover:bg-gray-600 transition duration-300`}
             ></button>
           </li>
