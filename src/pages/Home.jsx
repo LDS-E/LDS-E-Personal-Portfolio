@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import AboutMe from "../components/AboutMe";
 import DailyTechs from "../components/Stacks/DailyTechs";
 import ProjectMenuMain from "../components/ProjectMenuMain";
 import ContactMe from "../components/ContactMe";
-import { useEffect } from "react";
+import SideNav from "../components/SideNav"; // Importe o SideNav
 
 const Home = () => {
   useEffect(() => {
@@ -13,6 +14,7 @@ const Home = () => {
 
   return (
     <div className="bg-hero-pattern bg-cover bg-center min-h-screen">
+      <SideNav />
       <section id="hero">
         <HeroSection />
       </section>
