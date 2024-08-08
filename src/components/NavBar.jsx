@@ -97,6 +97,7 @@ const Navbar = () => {
 
         <h2 className="text-primary">Say Hello</h2>
         <li className="text-lg">lucass.eifler@gmail.com</li>
+        <li className="text-lg">eifler.lucas@ldsegroup.com</li>
       </ul>
     </nav>
   );
