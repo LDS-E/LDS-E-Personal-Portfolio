@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Hamburger Icon */}
+       
         <div className="cursor-pointer" onClick={toggleMenu}>
           <svg
             className="w-8 h-8"
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menu Links */}
+   
       <ul
         className={`fixed top-0 right-4 w-60 bg-backdark text-white text-2xl flex flex-col items-center gap-6 transition-transform duration-700 ease-in-out rounded-md ${
           isOpen ? "translate-y-20 py-6" : "-translate-y-full"
@@ -67,7 +67,7 @@ const Navbar = () => {
       >
         <li>
           <Link
-            to="/projects-menu"
+            to="/project-details"
             className="block text-white hover:text-gray-400 transition duration-300"
             onClick={toggleMenu}
           >
@@ -75,22 +75,22 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <a
-            href="#techs"
+          <Link
+            to="#techs"
             className="block text-white hover:text-gray-400 transition duration-300"
             onClick={toggleMenu}
           >
             My Résumé
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#projects"
+          <Link
+            to="#projects"
             className="block text-white hover:text-gray-400 transition duration-300"
             onClick={toggleMenu}
           >
             Maybe a Blog
-          </a>
+          </Link>
         </li>
 
         <br />
@@ -104,3 +104,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+*/

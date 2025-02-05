@@ -1,18 +1,18 @@
 import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Project from "./pages/Project";
 import ProjectsMenu from "./pages/ProjectsMenu";
-import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ProjectDetails from "./pages/ProjectDetails.jsx";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/project" element={<Project />} />
+        <Route path="/project-details" element={<ProjectDetails />} />
         <Route path="/projects-menu" element={<ProjectsMenu />} />
       </Routes>
       <Footer />
