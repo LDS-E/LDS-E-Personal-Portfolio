@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-hero-pattern bg-cover bg-center min-h-screen">
+    <div className="bg-hero-pattern bg-cover bg-center">
       <SideNav />
       <section id="hero">
         <HeroSection />

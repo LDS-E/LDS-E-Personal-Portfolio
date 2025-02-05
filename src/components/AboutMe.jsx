@@ -1,5 +1,5 @@
 import lightbulbsSvg from "/imgs/lightbulbs.svg";
-import profilephoto from "/imgs/profilephoto.jpg";
+//import profilephoto from "/imgs/profilephoto.jpg";
 import puzzle from "/imgs/puzzle.svg";
 
 const AboutMe = () => {
@@ -50,25 +50,6 @@ const AboutMe = () => {
           </div>
 
           {/* Right Side */}
-          <div className="flex flex-col items-center justify-center md:w-1/2 space-y-8">
-            <img
-              src={profilephoto}
-              alt="Lucas Eifler Photo"
-              className="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-cover"
-            />
-            <div>
-              <button
-                className="btn bg-primary text-black text-xl md:text-2xl py-2 px-4 rounded-md hover:font-bold hover:bg-secondary hover:text-white"
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    .scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                Let’s Talk
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

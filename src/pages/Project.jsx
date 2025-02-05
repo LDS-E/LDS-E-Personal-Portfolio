@@ -6,11 +6,7 @@ const Project = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <div className="bg-hero-pattern bg-cover bg-center min-h-screen">
-      Project
-    </div>
-  );
+  return <div className="bg-hero-pattern bg-cover bg-center">Project</div>;
 };
 
 export default Project;

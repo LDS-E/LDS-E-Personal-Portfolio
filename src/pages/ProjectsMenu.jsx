@@ -7,9 +7,7 @@ const ProjectsMenu = () => {
   }, []);
 
   return (
-    <div className="bg-hero-pattern bg-cover bg-center min-h-screen">
-      ProjectsMenu
-    </div>
+    <div className="bg-hero-pattern bg-cover bg-center ">ProjectsMenu</div>
   );
 };
 
