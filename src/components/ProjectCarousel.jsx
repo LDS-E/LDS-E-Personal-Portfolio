@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const ProjectCarousel = () => {
   const projects = [
     {
@@ -32,8 +34,21 @@ const ProjectCarousel = () => {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Funções de navegação
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+    );
+  };
+
   return (
-    <section className="bg-accent">
+    <section className="bg-accent py-16">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-primary mb-4">
           My Projects
@@ -41,25 +56,50 @@ const ProjectCarousel = () => {
         <div className="flex justify-center items-center gap-2">
           <div className="bg-secondary h-1 w-24"></div>
           <p className="text-lg">Skills I work with</p>
-          <div className="bg-secondary h-1 w-24"></div>
+          <div className="bg-accent h-1 w-24"></div>
         </div>
       </div>
-      <div className="carousel carousel-center rounded-box max-w-screen-xl mx-auto p-4 space-x-4">
-        {projects.map((project, index) => (
-          <div key={index} className="carousel-item">
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="rounded-box w-96 h-auto object-cover"
-            />
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-semibold text-white">
-                {project.title}
-              </h3>
-              <p className="text-sm text-white">{project.description}</p>
+
+      {/* Carrossel com navegação por botões */}
+      <div className="relative max-w-screen-xl mx-auto p-4 overflow-hidden">
+        <div className="flex transition-transform duration-300">
+          {/* Renderizar os projetos */}
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="carousel-item text-center w-1/3 p-2"
+              style={{
+                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+              }}
+            >
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="rounded-lg w-full h-64 object-cover"
+              />
+              <div className="mt-4">
+                <h3 className="text-lg font-semibold text-white">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-white">{project.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Botões de navegação */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full"
+        >
+          &lt;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full"
+        >
+          &gt;
+        </button>
       </div>
     </section>
   );

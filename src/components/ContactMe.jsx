@@ -1,4 +1,3 @@
-// ContactMe.jsx
 import { useState } from "react";
 
 const ContactMe = () => {
@@ -23,7 +22,7 @@ const ContactMe = () => {
 
   return (
     <section className="h-screen flex items-center justify-center bg-secondary">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-primary mb-4">
             Send me a message
@@ -37,7 +36,7 @@ const ContactMe = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-6">
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
           <div>
             <input
               type="text"
@@ -46,7 +45,7 @@ const ContactMe = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your Name"
-              className="input input-bordered w-full py-3 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary"
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary"
               required
             />
           </div>
@@ -59,7 +58,7 @@ const ContactMe = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your Email"
-              className="input input-bordered w-full py-3 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary"
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary"
               required
             />
           </div>
@@ -70,9 +69,9 @@ const ContactMe = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows="4"
+              rows="6"
               placeholder="Your Message"
-              className="textarea textarea-bordered w-full py-3 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary"
+              className="textarea textarea-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary"
               required
             ></textarea>
           </div>
@@ -80,7 +79,7 @@ const ContactMe = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="btn btn-primary text-white text-xl md:text-2xl py-2 px-6 rounded-md hover:bg-secondary hover:text-black transition-all"
+              className="btn btn-primary text-white text-xl md:text-2xl py-3 px-8 rounded-md hover:bg-primary hover:text-white transition-all"
             >
               Send
             </button>

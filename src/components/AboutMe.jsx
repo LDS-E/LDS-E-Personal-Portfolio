@@ -21,7 +21,7 @@ const AboutMe = () => {
 
   return (
     <section id="about-section" className="bg-accent py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <div className="bg-primary h-1 w-32 mx-auto mb-4"></div>
           <h1 className="text-4xl font-bold text-white animate__animated animate__fadeIn">
@@ -31,10 +31,24 @@ const AboutMe = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-12">
+          {/* Foto à esquerda */}
           <div
             className={`${
               isVisible ? "animate__animated animate__fadeInUp" : ""
-            } md:w-1/2 space-y-8 text-lg text-white opacity-80`}
+            } md:w-1/2 mb-8 md:mb-0`}
+          >
+            <img
+              src="/imgs/profile2sf.png"
+              alt="Lucas"
+              className="w-full h-auto rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+
+          {/* Texto à direita */}
+          <div
+            className={`${
+              isVisible ? "animate__animated animate__fadeInUp" : ""
+            } md:w-1/2 space-y-8 text-2xl text-text `}
           >
             <p className="leading-relaxed">
               Hey there! I&apos;m Lucas, a passionate full-stack developer. I
@@ -47,7 +61,7 @@ const AboutMe = () => {
               thinker and a fast problem-solver.
             </p>
 
-            <div className="flex items-center space-x-6 hover:space-x-8 transition-all duration-300 hover:text-yellow-400">
+            <div className="flex items-center space-x-6">
               <img
                 src={lightbulbsSvg}
                 alt="Lightbulb"
@@ -55,14 +69,14 @@ const AboutMe = () => {
               />
               <p className="leading-relaxed">
                 I build applications that not only look good but are functional.
-                Whether it’s perfecting the frontend or optimizing the backend,
-                I enjoy the process of making systems both efficient and
-                visually appealing.
+                Whether it&apos;s perfecting the frontend or optimizing the
+                backend, I enjoy the process of making systems both efficient
+                and visually appealing.
               </p>
             </div>
 
             {/* Seção 2: Ícone de Puzzle */}
-            <div className="flex items-center space-x-6 hover:space-x-8 transition-all duration-300 hover:text-blue-400">
+            <div className="flex items-center space-x-6 ">
               <img
                 src={puzzle}
                 alt="Puzzle"

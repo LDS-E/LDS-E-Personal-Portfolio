@@ -83,6 +83,9 @@ const Header = () => {
           >
             Almost a blog
           </a>
+          <Link to="https://github.com/LDS-E" className="btn btn-ghost">
+            Github
+          </Link>
         </div>
       )}
     </header>
