@@ -24,15 +24,18 @@ const ContactMe = () => {
   return (
     <section className="h-screen flex items-center justify-center bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="flex justify-start items-center text-center mb-8">
-          <div className="bg-primary h-1 w-32 mr-4"></div>
-          <h1 className="text-white text-2xl font-bold">Send me a message!</h1>
-          <div className="bg-primary h-1 w-16 ml-4"></div>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-primary mb-4">
+            Send me a message
+          </h2>
+          <div className="flex justify-center items-center gap-2">
+            <div className="bg-accent h-1 w-24"></div>
+            <p className="text-lg text-text">
+              Got a question or proposal, or just want to say hello? Go ahead.
+            </p>
+            <div className="bg-accent h-1 w-24"></div>
+          </div>
         </div>
-
-        <h2 className="text-white text-center mb-4 text-xl">
-          Got a question or proposal, or just want to say hello? Go ahead.
-        </h2>
 
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-6">
           <div>

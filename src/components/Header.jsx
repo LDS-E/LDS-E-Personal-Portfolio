@@ -9,7 +9,7 @@ const Header = () => {
       <div className="navbar container mx-auto px-4">
         <div className="flex-1">
           <Link to="/" className="text-xl font-bold">
-            <img src="/imgs/ldselogo2.png" alt="Logo" className="h-12" />
+            <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
           </Link>
         </div>
 
@@ -61,7 +61,7 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute top-16 right-4 bg-base-100 shadow-lg rounded-lg p-4 flex flex-col gap-4 lg:hidden">
+        <div className="absolute top-16 right-4 bg-background shadow-lg rounded-lg p-4 flex flex-col gap-4 lg:hidden">
           <Link
             to="/projects-menu"
             className="btn btn-ghost"

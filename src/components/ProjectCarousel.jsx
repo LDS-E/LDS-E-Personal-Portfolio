@@ -34,6 +34,16 @@ const ProjectCarousel = () => {
 
   return (
     <section className="bg-accent">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-extrabold text-primary mb-4">
+          My Projects
+        </h2>
+        <div className="flex justify-center items-center gap-2">
+          <div className="bg-secondary h-1 w-24"></div>
+          <p className="text-lg">Skills I work with</p>
+          <div className="bg-secondary h-1 w-24"></div>
+        </div>
+      </div>
       <div className="carousel carousel-center rounded-box max-w-screen-xl mx-auto p-4 space-x-4">
         {projects.map((project, index) => (
           <div key={index} className="carousel-item">
