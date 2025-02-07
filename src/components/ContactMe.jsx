@@ -22,7 +22,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center bg-neutral">
+    <section className="h-screen flex items-center justify-center bg-secondary">
       <div className="container mx-auto px-4">
         <div className="flex justify-start items-center text-center mb-8">
           <div className="bg-primary h-1 w-32 mr-4"></div>

@@ -4,9 +4,8 @@ const DailyTechs = () => {
   const skills = Stacks();
 
   return (
-    <section className="py-16 bg-base-200 text-white">
+    <section className="py-16 bg-secondary text-text">
       <div className="container mx-auto px-4">
-        {/* Title Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-primary mb-4">
             My Tech Stacks
@@ -18,7 +17,6 @@ const DailyTechs = () => {
           </div>
         </div>
 
-        {/* Tech Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
             <div

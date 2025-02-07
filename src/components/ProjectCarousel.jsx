@@ -33,7 +33,7 @@ const ProjectCarousel = () => {
   ];
 
   return (
-    <section className="my-16">
+    <section className="bg-accent">
       <div className="carousel carousel-center rounded-box max-w-screen-xl mx-auto p-4 space-x-4">
         {projects.map((project, index) => (
           <div key={index} className="carousel-item">

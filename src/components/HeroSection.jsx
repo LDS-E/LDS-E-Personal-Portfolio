@@ -1,29 +1,20 @@
 const HeroSection = () => {
   return (
-    <div
-      className="hero min-h-screen"
-      style={{
-        backgroundImage:
-          "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-      }}
-    >
-      <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-neutral-content text-center">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Olá, eu sou Lucas!</h1>
-          <p className="mb-5 text-lg">
-            Desenvolvedor Frontend apaixonado por criar interfaces modernas e
-            responsivas.
+    <div className="relative min-h-screen  bg-secondary hero">
+      <div className="hero-content text-neutral-content text-center relative z-10">
+        <div className="max-w-2xl px-4 py-8 md:px-8">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white animate__animated animate__fadeIn animate__delay-1s">
+            Hi, I&apos;m Lucas!
+          </h1>
+          <p className="text-lg mb-8 md:text-xl text-white opacity-90 animate__animated animate__fadeIn animate__delay-2s">
+            Frontend developer passionate about creating modern, responsive, and
+            user-friendly websites and apps.
           </p>
-          <div className="flex justify-center gap-4">
-            <a href="#projects" className="btn btn-primary">
-              Meus Projetos
-            </a>
-            <a href="#contact" className="btn btn-secondary">
-              Contato
-            </a>
-          </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 w-full text-center py-8 bg-gradient-to-t from-backdark to-transparent">
+        <span className="text-white opacity-70 text-sm">Scroll down</span>
       </div>
     </div>
   );

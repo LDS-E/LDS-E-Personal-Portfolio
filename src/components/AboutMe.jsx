@@ -3,7 +3,6 @@ import lightbulbsSvg from "/imgs/lightbulbs.svg";
 import puzzle from "/imgs/puzzle.svg";
 
 const AboutMe = () => {
-  // Para animações suaves ao rolar a página
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,12 +20,8 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <section
-      id="about-section"
-      className="bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 py-16"
-    >
+    <section id="about-section" className="bg-accent py-16">
       <div className="container mx-auto px-4">
-        {/* Título da Seção */}
         <div className="text-center mb-16">
           <div className="bg-primary h-1 w-32 mx-auto mb-4"></div>
           <h1 className="text-4xl font-bold text-white animate__animated animate__fadeIn">
@@ -35,9 +30,7 @@ const AboutMe = () => {
           <div className="bg-primary h-1 w-16 mx-auto mt-4"></div>
         </div>
 
-        {/* Texto e Descrição */}
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-12">
-          {/* Texto à esquerda */}
           <div
             className={`${
               isVisible ? "animate__animated animate__fadeInUp" : ""
@@ -54,7 +47,6 @@ const AboutMe = () => {
               thinker and a fast problem-solver.
             </p>
 
-            {/* Seção 1: Ícone de Lightbulb */}
             <div className="flex items-center space-x-6 hover:space-x-8 transition-all duration-300 hover:text-yellow-400">
               <img
                 src={lightbulbsSvg}

@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom"; // Para pegar parâmetros de URL
+import { useParams } from "react-router-dom";
 
-// Importar as imagens dos projetos (ou placeholders)
 import lightbulbsSvg from "/imgs/lightbulbs.svg";
 import puzzle from "/imgs/puzzle.svg";
 
 const ProjectDetails = () => {
-  const { projectId } = useParams(); // Pega o ID do projeto pela URL (com base no carrossel)
+  const { projectId } = useParams();
   const [project, setProject] = useState(null);
 
-  // Dados dos projetos - substitua conforme necessário
   const projects = [
     {
       id: "project1",
@@ -25,17 +23,15 @@ const ProjectDetails = () => {
         "To solve the problem of disorganized task management for both individuals and teams.",
       technologies: ["React", "Tailwind CSS", "Node.js"],
     },
-    // Adicione mais projetos conforme necessário...
   ];
 
-  // Encontrar o projeto correto com base no ID
   useEffect(() => {
     const foundProject = projects.find((proj) => proj.id === projectId);
     setProject(foundProject);
-    window.scrollTo(0, 0); // Rola para o topo quando a página carregar
+    window.scrollTo(0, 0); //
   }, [projectId]);
 
-  if (!project) return <div>Loading...</div>; // Exibir até o projeto ser carregado
+  if (!project) return <div>Loading...</div>;
 
   return (
     <div className="bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 py-16">
