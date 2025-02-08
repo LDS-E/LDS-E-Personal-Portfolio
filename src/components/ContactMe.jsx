@@ -1,4 +1,3 @@
-// ContactMe.jsx
 import { useState } from "react";
 
 const ContactMe = () => {
@@ -22,20 +21,20 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-start items-center text-center mb-8">
-          <div className="bg-primary h-1 w-32 mr-4"></div>
-          <h1 className="text-white text-2xl font-bold">Send me a message!</h1>
-
-          <div className="bg-primary h-1 w-16 ml-4"></div>
+    <section className="h-screen flex items-center justify-center bg-secondary">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-text mb-4 relative title p-4">
+            <span className="relative z-10">Send me a message</span>
+            <div className="absolute left-0 right-0 bottom-0 mx-auto bg-accent h-1 w-1/2 mt-2"></div>
+          </h2>
+          <p className="text-lg text-text subtitulo">
+            Got a question or proposal, or just want to say hello? Go ahead.
+          </p>
         </div>
 
-        <h2 className="text-white text-center mb-4">
-          Got a question or proposal, or just want to say hello? Go ahead.
-        </h2>
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-          <div className="mb-6">
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
+          <div>
             <input
               type="text"
               id="name"
@@ -43,11 +42,12 @@ const ContactMe = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your Name"
-              className="w-full py-3 px-4 rounded-lg bg-transparent border border-gray-300 text-white placeholder-white focus:outline-none focus:border-gray-500"
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto" // Fonte no input
               required
             />
           </div>
-          <div className="mb-6">
+
+          <div>
             <input
               type="email"
               id="email"
@@ -55,28 +55,28 @@ const ContactMe = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your Email"
-              className="w-full py-3 px-4 rounded-lg bg-transparent border border-gray-300 text-white placeholder-white focus:outline-none focus:border-gray-500"
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto" // Fonte no input
               required
             />
           </div>
-          <div className="mb-6">
+
+          <div>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows="4"
+              rows="6"
               placeholder="Your Message"
-              className="w-full py-3 px-4 rounded-lg bg-transparent border border-gray-300 text-white placeholder-white focus:outline-none focus:border-gray-500"
+              className="textarea textarea-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto" // Fonte no textarea
               required
             ></textarea>
           </div>
+
           <div className="flex justify-center">
-            {" "}
-            {/* Flex container for centering */}
             <button
               type="submit"
-              className="btn bg-primary text-black text-xl md:text-2xl py-2 px-4 rounded-md hover:font-bold hover:bg-secondary hover:text-white"
+              className="btn btn-primary text-white text-xl md:text-2xl py-3 px-8 rounded-md hover:bg-primary hover:text-white transition-all fonte-botao" // Fonte no botão
             >
               Send
             </button>
