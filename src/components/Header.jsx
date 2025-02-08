@@ -21,15 +21,19 @@ const Header = () => {
           <Link to="/project-details" className="btn btn-ghost">
             My Work
           </Link>
-          <Link to="#techs" className="btn btn-ghost">
+          <a href="#techs" className="btn btn-ghost">
             My Resume
-          </Link>
-          <Link to="#projects" className="btn btn-ghost">
+          </a>
+          <a href="#projects" className="btn btn-ghost">
             Almost a blog
-          </Link>
-          <Link to="https://github.com/LDS-E" className="btn btn-ghost">
+          </a>
+          <a
+            href="https://github.com/LDS-E"
+            target="_blank"
+            className="btn btn-ghost"
+          >
             Github
-          </Link>
+          </a>
         </div>
 
         <div className="lg:hidden">
@@ -86,9 +90,13 @@ const Header = () => {
           >
             Almost a blog
           </a>
-          <Link to="https://github.com/LDS-E" className="btn btn-ghost">
+          <a
+            href="https://github.com/LDS-E"
+            target="_blank"
+            className="btn btn-ghost"
+          >
             Github
-          </Link>
+          </a>
         </div>
       )}
     </header>
