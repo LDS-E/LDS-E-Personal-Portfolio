@@ -5,46 +5,51 @@ const ProjectCarousel = () => {
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp",
-      title: "Project 1",
-      description: "Descrição do Projeto 1",
+      title: "Company Website",
+      description:
+        "Next.js Company Website is a modern institutional website for companies and groups",
+      repoLink: "https://github.com/LDS-E/company-website",
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp",
-      title: "Project 2",
-      description: "Descrição do Projeto 2",
+      title: "Business Contact Page",
+      description:
+        "Business Contact Page – A modern and responsive contact page for small and medium businesses, built with with Next.js and TypeScript.",
+      repoLink: "https://github.com/LDS-E/Business-Contact-Page",
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp",
-      title: "Project 3",
-      description: "Descrição do Projeto 3",
+      title: "Networkschool",
+      description:
+        "NetWorkSchool website, an educational platform focused on web and backend development. Created with HTML, CSS and JavaScript",
+      repoLink: "https://github.com/LDS-E/networkschool-website",
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp",
-      title: "Project 4",
-      description: "Descrição do Projeto 4",
+      title: "To do List",
+      description:
+        "This is my first to-do list project developed with HTML, CSS, and JavaScript",
+      repoLink: "https://github.com/LDS-E/To-do-list",
     },
     {
       imageUrl:
         "https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp",
-      title: "Project 5",
-      description: "Descrição do Projeto 5",
+      title: "Shift management",
+      description:
+        "Project focused on shift management for healthcare professionals",
+      repoLink: "https://github.com/LDS-E/Schedule_Frontend",
+    },
+    {
+      imageUrl:
+        "https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp",
+      title: "2wheelsacrosstworld",
+      description: "My Blog",
+      repoLink: "https://github.com/LDS-E/2wheelsacrosstworld",
     },
   ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-    );
-  };
 
   return (
     <section className="bg-accent py-16">
@@ -56,45 +61,35 @@ const ProjectCarousel = () => {
           </h2>
         </div>
 
-        <div className="relative max-w-screen-xl mx-auto p-4 overflow-hidden">
-          <div className="flex transition-transform duration-300">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="carousel-item text-center w-1/3 p-2"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                }}
-              >
-                <img
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className="rounded-lg w-full h-64 object-cover"
-                />
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-white name-project">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-white description-project">
-                    {project.description}
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+            >
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold text-secondary mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-lg text-secondary mb-4">
+                  {project.description}
+                </p>
+                <a
+                  href={project.repoLink}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-primary hover:text-secondary"
+                >
+                  View on GitHub
+                </a>
               </div>
-            ))}
-          </div>
-
-          <button
-            onClick={prevSlide}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full button-navigation"
-          >
-            &lt;
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full button-navigation"
-          >
-            &gt;
-          </button>
+            </div>
+          ))}
         </div>
       </div>
     </section>
