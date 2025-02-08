@@ -17,7 +17,6 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden lg:flex gap-4">
           <Link to="/project-details" className="btn btn-ghost">
             My Work

@@ -23,15 +23,13 @@ const AboutMe = () => {
     <section id="about-section" className="bg-accent py-16">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <div className="bg-primary h-1 w-32 mx-auto mb-4"></div>
-          <h1 className="text-4xl font-bold text-white animate__animated animate__fadeIn">
-            A Little About Me
-          </h1>
-          <div className="bg-primary h-1 w-16 mx-auto mt-4"></div>
+          <h2 className="text-4xl font-bold text-text animate__animated animate__fadeIn relative title p-4">
+            <span className="relative z-10">A Little About Me</span>
+            <div className="absolute left-0 right-0 bottom-0 mx-auto bg-primary h-1 w-1/2 mt-2"></div>
+          </h2>
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-12">
-          {/* Foto à esquerda */}
           <div
             className={`${
               isVisible ? "animate__animated animate__fadeInUp" : ""
@@ -44,7 +42,6 @@ const AboutMe = () => {
             />
           </div>
 
-          {/* Texto à direita */}
           <div
             className={`${
               isVisible ? "animate__animated animate__fadeInUp" : ""
@@ -75,7 +72,6 @@ const AboutMe = () => {
               </p>
             </div>
 
-            {/* Seção 2: Ícone de Puzzle */}
             <div className="flex items-center space-x-6 ">
               <img
                 src={puzzle}

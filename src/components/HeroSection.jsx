@@ -11,8 +11,8 @@ const HeroSection = () => {
             Knowledge is what transforms our BEING
           </h1>
           <p className="text-lg md:text-xl text-white opacity-90 animate__animated animate__fadeIn animate__delay-2s mt-4 md:mt-6">
-            Frontend developer passionate about creating modern, responsive, and
-            user-friendly websites and apps.
+            Full stack developer who turns ideas into code. From design to
+            functionality, I build complete and innovative web solutions.
           </p>
           <div className="mt-6 flex justify-center w-full">
             <button className="btn btn-primary self-center animate__animated animate__fadeIn animate__delay-3s">
