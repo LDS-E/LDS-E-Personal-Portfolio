@@ -6,10 +6,14 @@ const Header = () => {
 
   return (
     <header className="bg-background shadow-md text-text sticky top-0 z-50 w-full">
-      <div className="navbar container mx-auto px-4">
+      <div className="navbar container mx-auto px-4 flex items-center justify-between">
         <div className="flex-1">
           <Link to="/" className="text-xl font-bold">
-            <img src="/imgs/ldselogo2.png" alt="Logo" className="h-24" />
+            <img
+              src="/imgs/ldselogo2.png"
+              alt="Logo"
+              className="h-16 md:h-24 w-auto"
+            />
           </Link>
         </div>
 
