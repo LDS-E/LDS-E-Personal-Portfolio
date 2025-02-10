@@ -21,7 +21,10 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center bg-secondary">
+    <section
+      id="contact-section"
+      className="h-screen flex items-center justify-center bg-secondary"
+    >
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-text mb-4 relative title p-4">
@@ -76,7 +79,7 @@ const ContactMe = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="btn btn-primary text-white text-xl md:text-2xl py-3 px-8 rounded-md hover:bg-primary hover:text-white transition-all fonte-botao" // Fonte no botão
+              className="btn btn-lg bg-accent text-white hover:bg-primary px-6 py-3 rounded-lg transition duration-300 self-center"
             >
               Send
             </button>
