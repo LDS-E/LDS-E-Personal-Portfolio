@@ -15,7 +15,14 @@ const HeroSection = () => {
             functionality, I build complete and innovative web solutions.
           </p>
           <div className="mt-6 flex justify-center w-full">
-            <button className="btn btn-primary self-center animate__animated animate__fadeIn animate__delay-3s">
+            <button
+              className="btn btn-lg bg-accent text-white hover:bg-primary px-6 py-3 rounded-lg transition duration-300 self-center"
+              onClick={() =>
+                document
+                  .getElementById("contact-section")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Contact Me
             </button>
           </div>
