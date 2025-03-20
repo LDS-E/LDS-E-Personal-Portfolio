@@ -18,17 +18,26 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:flex gap-4">
-          <Link to="/project-details" className="btn btn-ghost">
+          {/*<Link to="/project-details" className="btn btn-ghost">
             My Work
-          </Link>
-          <a href="#techs" className="btn btn-ghost">
+          </Link>*/}
+          <a
+            href="/imgs/CVLDSE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost"
+          >
             My Resume
-          </a>
-          <a href="#projects" className="btn btn-ghost">
-            Almost a blog
           </a>
           <a
             href="https://github.com/LDS-E"
+            target="_blank"
+            className="btn btn-ghost"
+          >
+            Almost a blog
+          </a>
+          <a
+            href="https://github.com/LDS-E/2wheelsacrosstworld"
             target="_blank"
             className="btn btn-ghost"
           >
@@ -69,13 +78,13 @@ const Header = () => {
 
       {isOpen && (
         <div className="absolute top-16 right-4 bg-background shadow-lg rounded-lg p-4 flex flex-col gap-4 lg:hidden">
-          <Link
+          {/*  <Link
             to="/projects-menu"
             className="btn btn-ghost"
             onClick={() => setIsOpen(false)}
           >
             My Work
-          </Link>
+          </Link>*/}
           <a
             href="#techs"
             className="btn btn-ghost"
