@@ -47,7 +47,7 @@ const ContactMe = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your Name"
-              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
               required
             />
           </div>
@@ -60,7 +60,7 @@ const ContactMe = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your Email"
-              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
               required
             />
           </div>

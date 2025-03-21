@@ -30,14 +30,14 @@ const Header = () => {
             My Resume
           </a>
           <a
-            href="https://github.com/LDS-E"
+            href="https://github.com/LDS-E/2wheelsacrosstworld"
             target="_blank"
             className="btn btn-ghost"
           >
             Almost a blog
           </a>
           <a
-            href="https://github.com/LDS-E/2wheelsacrosstworld"
+            href="https://github.com/LDS-E"
             target="_blank"
             className="btn btn-ghost"
           >
