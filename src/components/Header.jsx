@@ -86,14 +86,17 @@ const Header = () => {
             My Work
           </Link>*/}
           <a
-            href="#techs"
+            href="/imgs/CVLDSE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-ghost"
             onClick={() => setIsOpen(false)}
           >
             My Resume
           </a>
           <a
-            href="#projects"
+            href="https://github.com/LDS-E/2wheelsacrosstworld"
+            target="_blank"
             className="btn btn-ghost"
             onClick={() => setIsOpen(false)}
           >
