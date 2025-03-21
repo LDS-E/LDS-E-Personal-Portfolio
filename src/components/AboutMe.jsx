@@ -33,7 +33,6 @@ const AboutMe = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
-          {/* Imagem - Para telas pequenas vai ficar em cima, e para maiores ao lado */}
           <div
             className={`${
               isVisible ? "animate__animated animate__fadeInUp" : ""
@@ -46,7 +45,6 @@ const AboutMe = () => {
             />
           </div>
 
-          {/* Texto */}
           <div
             className={`${
               isVisible ? "animate__animated animate__fadeInUp" : ""
