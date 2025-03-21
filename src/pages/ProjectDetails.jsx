@@ -36,7 +36,6 @@ const ProjectDetails = () => {
   return (
     <div className="bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 py-16">
       <div className="container mx-auto px-4">
-        {/* Carrossel de Imagens */}
         <div className="carousel carousel-center bg-neutral rounded-box max-w-lg space-x-4 p-4 mx-auto">
           {project.images.map((image, index) => (
             <div key={index} className="carousel-item">
@@ -49,12 +48,10 @@ const ProjectDetails = () => {
           ))}
         </div>
 
-        {/* Título e Descrição do Projeto */}
         <div className="text-center mt-12 text-white">
           <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
           <p className="text-xl leading-relaxed mb-8">{project.description}</p>
 
-          {/* Detalhes do Projeto */}
           <div className="bg-white text-black p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">Project Details</h2>
             <p className="mb-4">

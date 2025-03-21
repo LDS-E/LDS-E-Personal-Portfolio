@@ -15,11 +15,6 @@ const ContactMe = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   return (
     <section
       id="contact-section"
@@ -36,7 +31,14 @@ const ContactMe = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          className="max-w-2xl mx-auto space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
           <div>
             <input
               type="text"
@@ -45,7 +47,7 @@ const ContactMe = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your Name"
-              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto" // Fonte no input
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
               required
             />
           </div>
@@ -58,7 +60,7 @@ const ContactMe = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your Email"
-              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto" // Fonte no input
+              className="input input-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
               required
             />
           </div>
@@ -71,7 +73,7 @@ const ContactMe = () => {
               onChange={handleChange}
               rows="6"
               placeholder="Your Message"
-              className="textarea textarea-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto" // Fonte no textarea
+              className="textarea textarea-bordered w-full py-4 px-4 rounded-lg text-white bg-transparent focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary border-2 border-gray-400 focus:border-2 focus:border-primary fonte-texto"
               required
             ></textarea>
           </div>
