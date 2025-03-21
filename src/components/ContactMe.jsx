@@ -6,6 +6,7 @@ const ContactMe = () => {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,6 +14,43 @@ const ContactMe = () => {
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      access_key: import.meta.env.VITE_WEB3FORMS_API_KEY,
+    };
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setStatus("There was an error sending your message. Please try again.");
+      }
+    } catch (error) {
+      setStatus("There was an error sending your message. Please try again.");
+    }
   };
 
   return (
@@ -31,14 +69,7 @@ const ContactMe = () => {
           </p>
         </div>
 
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          className="max-w-2xl mx-auto space-y-6"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
           <div>
             <input
               type="text"
@@ -87,6 +118,12 @@ const ContactMe = () => {
             </button>
           </div>
         </form>
+
+        {status && (
+          <div className="mt-4 text-center">
+            <p className="text-lg text-white">{status}</p>
+          </div>
+        )}
       </div>
     </section>
   );
