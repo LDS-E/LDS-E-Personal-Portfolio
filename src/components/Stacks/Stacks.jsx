@@ -13,8 +13,6 @@ const Stacks = () => {
     { name: "Git", icon: "/imgs/git-original.svg" },
     { name: "MongoDB", icon: "/imgs/mongodb-original.svg" },
     { name: "PostgreSQL", icon: "/imgs/postgresql-original.svg" },
-    /*     { name: "C#", icon: "src/assets/csharp-original.svg" },
-    { name: "Terraform", icon: "src/assets/terraform-original.svg" }, */
   ];
 
   return skills;
